@@ -2,7 +2,7 @@
 #include <limits.h>
 
 
-int string_to_int(char *str){
+int string_to_int(char* str){
 	
 	int index = 0;
 	int sign = 0;
