@@ -10,10 +10,10 @@ int verificationSet(int* vec){
 	return 0;
 }
 
-void incremental(int* vec, int* tSet){
+void incremental(int* vec, int tSet){
 	if (verificationSet(vec) == 1){
-		*tSet+=1;
-		printf("INC %d\n",*tSet+0);
+		tSet+=1;
+		printf("INC %d\n",tSet);
 	}
 }
 
@@ -31,12 +31,8 @@ void populateVector(int* vec, int n){
 
 void consecutiveSets(int* vec,int n){
 	populateVector(vec,n);
-	int i;
-	printf("Populated Vector -> { ");
-	for (i = 0; i < n; i++){
-		printf("%d%s",*(vec+i),(i<n-1)?", ":" }\n");
-	}
 	int inc = 0;
+	int i;
 	for (i = 1; i < n-1; i++){
 		incremental(vec+i,&inc);
 	}
