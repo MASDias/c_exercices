@@ -5,14 +5,14 @@ int main(void){
 	
 	char str[] = "The number must be saved";
 	char str2[] = "This is a test";
-	char c = 'i';
+	char c = 'u';
 	int vec[51];
 	int i;
 	
-	int limit = iterator(str2, c, vec);
+	int limit = iterator(str, c, vec);
 	
-	printf("\nGiven string: 'The number must be saved'\n\n");
-	printf("\nGiven string: 'This is a test'\n\n");
+	printf("\nGiven string: 'The number must be saved'\n");
+	printf("\nGiven character: 'u'\n\n");
 	printf("Vec of index where chosen character was found: {");
 	for (i = 0; i < limit; i++)
 	{
