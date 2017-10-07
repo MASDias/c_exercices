@@ -2,23 +2,9 @@
 #include "fillVec.h"
 
 void fill_vec(int* vec, int n){
-	
-	int i;
-	
-	for (i = 0; i < n; i++)
-	{
+	int i; //valor i para incrementar 
+	for (i = 0; i < n; i++){
 		printf("Insert number for vec[%d]: ", i);
-		scanf("%d", vec + i); 
+		scanf("%d", vec + i); //Leitura de numero
 	}
-	
-	printf("\nYour vector: \n");
-	printf("{");
-	i = 0;
-	for (i = 0; i < n; i++)
-	{
-		printf("%d%s", vec[i], (i != 19 ? ", " : ""));
-	}
-	
-	printf("}\n");
-	
 }

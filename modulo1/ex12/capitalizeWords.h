@@ -1,5 +1,5 @@
-#ifndef SUMEVENS_H
-#define SUMEVENS_H
+#ifndef CAPITALIZEWORDS_H
+#define CAPITALIZEWORDS_H
 
 char capitalize_words(char* values);
 	
