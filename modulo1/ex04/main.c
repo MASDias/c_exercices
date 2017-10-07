@@ -7,7 +7,7 @@ int main(void){
 	
 	printf("\nOriginal String: %s\n", str);
 	
-	convert_to_upper_pa(str);
+	convert_to_upper(str);
 	
 	return 0;
 }

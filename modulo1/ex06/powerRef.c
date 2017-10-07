@@ -1,12 +1,12 @@
 #include <stdio.h>
-#include <limits.h>
+
 void powerRef(int* x, int y){
+	
 	int i;
-	int pot = *x;
-	printf("\n");
+	int base = *x;
+	
+	//multiplica x por si próprio i vezes até i chegar ao valor do expoente. 
 	for(i = 1; i < y; i++){
-		printf("%d ^ %d = %d\n",pot, i , *x);
-		*x = *x*(pot);
+		*x = *x*(base);
 	}
-	printf("%d ^ %d = %d\n",pot, y , *x);
 }
