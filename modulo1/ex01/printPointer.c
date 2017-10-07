@@ -12,6 +12,7 @@ void printPointer(void){
 	printf("Adress of x: %p\n", &x);
 	printf("Adress of xPtr: %p\n", xPtr);
 	printf("Value pointed by xPtr: %d\n", *xPtr);
+	printf("Address of vec %p\n", vec);
 	printf("Value of vec[0] %d\n", vec[0]);
 	printf("Value of vec[1] %d\n", vec[1]);
 	printf("Value of vec[2] %d\n", vec[2]);

@@ -1,0 +1,7 @@
+a) x e y mostram os valores que foram atribuidos, x tem o valor de 5, y tem
+o valor que foi atribuido a xPtr, que foi 5 + 3, que o reutado é 8.
+x e xPtr, mostra a posição de memoria, em hexadecimal onde foram alocados.
+O valor dados a xPtr é a posição, hexadecimal da variavel x
+Endereço de vec
+Valores correspondentes a vec[0] ... vec[3], 10, 11, 12 e 13
+No final o encereço que correspomde a cada posição do vetor.

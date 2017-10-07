@@ -1,0 +1,4 @@
+b) Relativamente à relação de entre vec e vec[0], como vec é o endereço onde 
+começa o vetor "vec", significa que vec[0] tem que ser a mesma, sendo  vec[0] a 
+primeira posição do vetor "vec"., vec[1] e vec[2] correpondem às posições 
+seguintes em hexadecimal.

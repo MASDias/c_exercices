@@ -1,0 +1,3 @@
+c) Se fosse numa diferente arquitetura, poderiamos ver uma ddiferença no endereço 
+em hexadecimal, por exemplo se fosse uma arquitetura de 64 bit, o endereço seria 
+em endereço maior.
