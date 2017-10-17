@@ -23,4 +23,4 @@ operation:
 #epilogue
 	movl %ebp, %esp
 	popl %ebp
-	ret
+ret

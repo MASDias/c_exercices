@@ -19,7 +19,6 @@ sumDiferentBits:
 	addl d, %eax #somar ao %eax o valor de d
 	addl %ebx, %ecx #somar ao %ecx o valor de %ebx
 	subl %ecx, %eax #subtrair ao %eax o valor do registo em %ebx
-	adc $0, %edx
 # epilogue
 	movl %ebp, %esp # restore the previous stack pointer ("clear" the stack)
 	popl %ebp # restore the previous stack frame pointer
