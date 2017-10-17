@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "operation.h"
-int op1=15, op2=3, res=0;
+int op1=4, op2=12, res=0;
 int main(void){
 	
 	res = operation();

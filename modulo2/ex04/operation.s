@@ -17,8 +17,8 @@ operation:
 	movl CONST, %edx
 	subl %edx, %ebx
 	subl %ecx, %edx
-	subl %ebx, %edx
-	movl %edx, %eax
+	subl %edx, %ebx
+	movl %ebx, %eax
 	movl %eax, res
 #epilogue
 	movl %ebp, %esp
