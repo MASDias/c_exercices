@@ -12,7 +12,14 @@ sumIntValuesCarry:
 	movl $0, %ebx #limpar qualquer lixo que possa ter no regito %ebx
 	movl a, %eax
 	addl b, %eax
+jo overflow
+	movl $0, %eax
+	jmp fim
+overflow:
+	movl $1, %eax
+fim:
 # epilogue
 	movl %ebp, %esp # restore the previous stack pointer ("clear" the stack)
 	popl %ebp # restore the previous stack frame pointer
 ret
+
