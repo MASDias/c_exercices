@@ -9,14 +9,16 @@ sumIntValuesCarry:
 	movl %esp, %ebp # the stack frame pointer for sum function
 #body
 	movl $0, %eax #limpar qualquer lixo que possa ter no regito %eax
-	movl $0, %ebx #limpar qualquer lixo que possa ter no regito %ebx
 	movl a, %eax
 	addl b, %eax
 jo overflow
-	movl $0, %eax
-	jmp fim
+jc carry
+jmp fim
 overflow:
-	movl $1, %eax
+	movl $-1, %eax
+	jmp fim
+carry:
+	movl $-2, %eax
 fim:
 # epilogue
 	movl %ebp, %esp # restore the previous stack pointer ("clear" the stack)
