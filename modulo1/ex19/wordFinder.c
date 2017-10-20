@@ -38,4 +38,5 @@ char* find_word(char* str, char* word, char* initial_addr){
 		}
 	}
 	return NULL;//null caso "word" nao exista
+	
 }
