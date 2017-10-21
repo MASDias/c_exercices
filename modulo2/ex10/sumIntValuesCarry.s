@@ -11,7 +11,6 @@ sumIntValuesCarry:
 	movl $0, %eax #limpar qualquer lixo que possa ter no regito %eax
 	movl a, %eax
 	addl b, %eax
-	cmp %eax
 jo overflow
 jc carry
 carry:
@@ -19,7 +18,6 @@ carry:
 	jmp end
 overflow:
 	movl $-1, %eax
-
 end:
 # epilogue
 	movl %ebp, %esp # restore the previous stack pointer ("clear" the stack)
