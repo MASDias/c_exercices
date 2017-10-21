@@ -1,6 +1,13 @@
 .section .data
 	.global num
-	
+tres:
+	.int 3
+doze:
+	.int 12
+cinco:
+	.int 5
+um:
+	.int 1
 .section .text
 .global operation
 operation:
@@ -14,12 +21,11 @@ operation:
 	movl $0, %edx #limpar qualquer lixo que possa ter no regito %edx
 	
 	movl num, %eax
-	movl $3, %ebx
-	imul %ebx
-	addl $12, %eax
-	movl $3, %ebx
-	idivl %ebx
-	addl $5, %eax
+	subl um, %eax
+	imul tres, %eax
+	addl doze, %eax
+	idivl tres, %eax
+	addl cinco, %eax
 	subl num, %eax
 	
 # epilogue

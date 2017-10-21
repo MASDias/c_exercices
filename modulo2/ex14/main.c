@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include "operation.h"
-int num = 10;
+signed int num = 10;
 int main(void){
-	
-	printf("Result: %f.2\n\n", operation());
-	
+	printf("\nNum = %d\n", num);
+	printf("Result = %d\n\n", operation());
 	return 0;
 }
