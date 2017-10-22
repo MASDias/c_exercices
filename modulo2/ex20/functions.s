@@ -66,7 +66,7 @@ f3:
 
 	movl i, %edx
 	movl j, %ecx
-	cmpl %edx, %eax
+	cmpl %ecx, %edx
 	jl f3Else
 	
 f3If:
@@ -81,22 +81,18 @@ f3If:
 f3Else:
 	movl %ecx, %eax
 	mull %edx
-	movl %eax,h
+	movl %eax, h
 
-	addl %edx, %ecx
+	addl i, %ecx
 	addl $2, %ecx
 	movl %ecx, g
 	jmp divide3
 
 divide3:
-	movl h,%esi
+	movl h, %eax
 	movl g, %edi
-	subl %edi,%esi
-	cmpl %edi, %esi	
-	jge divide3
-	
-	movl %esi, r
-	movl r, %eax
+	movl $0, %edx
+	divl %edi
 	jmp end
 
 #FUNÇÂO F4

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "functions.h"
 #include "functions2.h"
-int i = 16, j = 10, h = 0, g = 0, r = 0, finalAssembly = 0, finalC = 0;
+int i = 40, j = 52, h = 0, g = 0, r = 0, finalAssembly = 0, finalC = 0;
 int main(void){
 	
 	finalAssembly = f();
