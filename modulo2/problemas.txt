@@ -1,0 +1,5 @@
+Exercicios todos completos. Mas com duvidas se o exercicio 10 esta resolvido 
+como pretendido.
+com duvida nos exercicios 6 e 7, que dizia para acrescentar um metodo a função
+nao sabia se era para acrescentar os modulos dos exercicios anteriores para 
+o makefile ou so os metodos no ficheiro .s dos exercicios.
