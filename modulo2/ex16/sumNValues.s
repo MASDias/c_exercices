@@ -25,14 +25,9 @@ my_loop:
 	mul %ecx #multiplica ecx por eax
 	incl %ecx #incrementa contador
 	addl %eax, %ebx #incrementa o resultado para o somatorio total 
-    jo overflow
 jmp my_loop
-overflow:
-	movl $0, %eax
-	jmp end
 end_loop:
 	movl %ebx, %eax #devolve somatario para eax
-end:
 # epilogue
 	movl %ebp, %esp # restore the previous stack pointer ("clear" the stack)
 	popl %ebp # restore the previous stack frame pointer
