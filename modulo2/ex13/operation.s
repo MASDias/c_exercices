@@ -15,14 +15,12 @@ operation:
 	movl $0, %ebx #limpar qualquer lixo que possa ter no regito %ebx
 	movl $0, %ecx #limpar qualquer lixo que possa ter no regito %ecx
 	movl $0, %edx #limpar qualquer lixo que possa ter no regito %edx
-	
 	movl d, %ebx
 	movl b, %eax
 	movl c, %ecx
-	imul %ecx 
-	idivl %ebx
-	movl a, %ebx
-	addl %ebx, %eax
+	mul %ecx #multiplica eax por ecx ficando o resultado em eax (B*C)  
+	divl %ebx #dividir por eax por ebx (B*C)/D
+	addl a, %eax #soma por fim a A+((B*C)/D)
 	
 # epilogue
 	movl %ebp, %esp # restore the previous stack pointer ("clear" the stack)

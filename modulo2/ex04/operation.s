@@ -2,7 +2,6 @@
 .global op1
 .global op2
 .global res
-
 CONST:
 	.int 10
 	
@@ -12,14 +11,15 @@ operation:
 #prologue
 	pushl %ebp
 	movl %esp, %ebp
-	movl op1, %ebx
+#body
+	movl op1, %eax
 	movl op2, %ecx
 	movl CONST, %edx
-	subl %edx, %ebx
-	subl %ecx, %edx
-	subl %edx, %ebx
-	movl %ebx, %eax
-	movl %eax, res
+	
+	subl %edx, %eax #subtrair a eax edx  (op1-const)
+	subl %ecx, %edx #subtrair a edx ecx  (const-op2)
+	subl %edx, %eax #subtrai a eax edx (op1-const)-(const-op2)
+
 #epilogue
 	movl %ebp, %esp
 	popl %ebp

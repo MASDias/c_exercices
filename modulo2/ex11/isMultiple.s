@@ -11,12 +11,13 @@ isMultiple:
 #body
 	movl $0, %eax #limpar qualquer lixo que possa ter no regito %eax
 	movl $0, %ecx #limpar qualquer lixo que possa ter no regito %ecx
-	movl $0, %edx #limpar qualquer lixo que possa ter no regito %edx, mas com a duvida se e preciso numa operçao de divisao de 8 bits
+	movl $0, %edx #limpar qualquer lixo que possa ter no regito %edx
 #dividendo  %eax
 	movl a, %eax
 #divisor b
 #divide %eax by b
 #quotient in %eax
+#resto %edx
 	divl b
 #move o resto da divisao para %al 
 	movl %edx, %eax

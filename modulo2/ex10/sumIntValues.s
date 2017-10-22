@@ -2,16 +2,12 @@
 	.global a
 	.global b
 .section .text
-.global sumIntValuesCarry # int sumIntValuesCarry(void)
-sumIntValuesCarry:
+.global sumIntValues # int sumIntValuesCarry(void)
+sumIntValues:
 #prologue
 	pushl %ebp # save previous stack frame pointer
 	movl %esp, %ebp # the stack frame pointer for sum function
 #body
-	movl $0, %edx
-	movl $0, %ebx
-	movl $0, %eax
-	movl $0, %ecx
 	movl a, %eax
 	addl b, %eax
 	jo overflow

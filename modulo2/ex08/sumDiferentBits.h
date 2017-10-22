@@ -1,4 +1,4 @@
 #ifndef SUMDIFERENTBITS_H
 #define SUMDIFERENTBITS_H
-	short sumDiferentBits();
+	long long sumDiferentBits();
 #endif

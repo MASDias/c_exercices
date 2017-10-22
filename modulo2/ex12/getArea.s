@@ -11,14 +11,9 @@ getArea:
 	pushl %ebp # save previous stack frame pointer
 	movl %esp, %ebp # the stack frame pointer for sum function
 #body
-	movl $0, %eax #limpar qualquer lixo que possa ter no regito %eax
-	movl $0, %ebx #limpar qualquer lixo que possa ter no regito %ebx
-	movl $0, %ecx #limpar qualquer lixo que possa ter no regito %ecx
-	movl $0, %edx #limpar qualquer lixo que possa ter no regito %edx
-	
 	movl LENGTH, %eax
 	movl WIDTH, %ebx
-	mul %ebx
+	mul %ebx #pois nao faz o produto sem o valor guardado em registo
 # epilogue
 	movl %ebp, %esp # restore the previous stack pointer ("clear" the stack)
 	popl %ebp # restore the previous stack frame pointer

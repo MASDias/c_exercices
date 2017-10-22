@@ -1,4 +1,4 @@
 #ifndef SWAP_H
 #define SWAP_H
-	short swap();
+	int swap();
 #endif
