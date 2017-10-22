@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include <limits.h>
 #include "sumIntValuesCarry.h"
-unsigned int a = INT_MAX;
-unsigned int b = 4;
+signed int a = INT_MAX;
+signed int b = 1;
 int main(void){
-	printf("Result of the sum of %d + %d = %d %s\n",a,b,sumIntValuesCarry() ,(sumIntValuesCarry()==-1)?"Overflow":"");
-	a = 10;
-	b = 15;
-	printf("Result of the sum of %d + %d = %d %s\n",a,b,sumIntValuesCarry() ,(sumIntValuesCarry()==-1)?"Overflow":"");
+	signed int result = sumIntValuesCarry();
+	printf("Result of the sum of %d + %d = %d %s\n",a,b,result  ,(result ==-1)?"Overflow":"");
 	return 0;
 }
