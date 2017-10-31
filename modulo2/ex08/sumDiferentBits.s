@@ -18,10 +18,10 @@ sumDiferentBits:
 	movw b, %cx #atribuir ao registo %cx, o valor guardado em b, um short que tem 2 bytes
 	movl d, %eax #atribuir ao registo %eax, o valor guardado em b, um int que tem 4 bytes
 	
-	addb a, %cl #somar "a" a %ecx A + B
-	subw c, %cx #subtrair ao %edx o valor do registo em %ecx A + B - C
+	addw a, %cx #somar "a" a %cx A + B
+	subl c, %ecx # A + B - C
 	addl %ecx, %eax #somar ao %eax o valor de %eax
-
+	adcl $0, %edx
 # epilogue
 	movl %ebp, %esp # restore the previous stack pointer ("clear" the stack)
 	popl %ebp # restore the previous stack frame pointer
