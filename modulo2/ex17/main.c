@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "hotCold.h"
-	short current = 15, desired = 15;
+	short current = 15, desired = 70;
 int main(void){
 	if (current > desired){
 		printf("%d segundos a arrefecer\n",hotCold());	

@@ -2,7 +2,7 @@
 	.global a
 	.global b
 	n:
-	.int 15
+	.int 4
 	i:
 	.int 1
 .section .text
