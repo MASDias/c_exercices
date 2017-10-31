@@ -10,7 +10,7 @@ spaceCount:
 	pushl %esi
 	movl %esp, %ebp
 #body
-	movl ptr1, %esi	#apontar memoria de ptr1 a %esi 
+	movl ptr1, %esi		#apontar memoria de ptr1 a %esi 
 	movl $0, %eax 		#contador de espaços
 loop_cnt:
 	cmpb $0, (%esi)
