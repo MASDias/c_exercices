@@ -20,8 +20,10 @@ int f2C(int i, int j){
 	}
 	else{
 		j = j + 1;
-		h = i * j;
 	}
+	
+	h = i * j;
+	
 	return h;
 }
 
@@ -38,7 +40,8 @@ int f3C(int i, int j){
 		h = i * j;
 		g = i + j + 2;
 	}
-		r = h / g;
+	
+	r = h / g;
 	return r;
 }
 
