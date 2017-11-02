@@ -13,16 +13,17 @@ vec_search:
 	
 #body
 	movl ptr, %esi
-	movl num, %ecx
-	movw x, %dx
-	jmp loop
+	movl num, %ecx			
+	movw x, %dx				
 	
-loop:						#função loop do assembly automaticamente decrementa o ecx
-	cmpw %dx, (%esi)
+iterator:						#função loop do assembly automaticamente decrementa o ecx
+	cmpw %dx, (%esi)		
 	je return
 	
 	addl $2, %esi
-	jmp loop	
+	loop iterator	
+	movl $0, %eax
+	jmp end
 
 return:
 	movl %esi, %eax
