@@ -11,21 +11,27 @@ str_copy_p:
 	movl %esp, %ebp # the stack frame pointer for sum function
 	
 #body
-	movl $ptr1, %eax
-	movl $ptr2, %ebx
-	cmpb $0, (%eax)
-	je end
-	cmp $'b', (%eax)
-	jne next
+	movl ptr1, %esi
+	movl ptr2, %edi
 
-next:
-	movb $0, %cl
-	movb (%eax),%cl
-	movb %cl,(%ebx)
-	incl %eax
-	incl %ebx
-	jmp str_copy_p
+str_loop:
+	movb (%esi), %cl
+	movb %cl, (%edi)
+	cmpb $0 , %cl
+	jz end
+	cmpb $98, %cl
+	je switch
+	incl %esi
+	incl %edi
+	jmp str_loop
 	
+switch:
+	movb $'v', %cl
+	movb %cl, (%edi)
+	incl %esi
+	incl %edi
+	jmp str_loop
+
 # epilogue
 end:
 	movl %ebp, %esp # restore the previous stack pointer ("clear" the stack)
