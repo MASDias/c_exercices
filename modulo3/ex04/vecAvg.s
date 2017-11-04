@@ -1,6 +1,5 @@
 .section .data
-.global sum
-.global num
+
 .section .text
 .global vecAvg
 vecAvg:
@@ -8,9 +7,11 @@ vecAvg:
 	pushl %ebp
 	movl %esp, %ebp
 #body
-	movl $0, %edx
-	movl sum, %eax 
-	idivl num
+	
+	call vecSum			#chama a funcao de soma do vetor
+
+	movl $0, %edx		#limpa registo edx para o calculo da media
+	idivl num			#media da soma
 #epilogue
 	movl %ebp, %esp
 	popl %ebp

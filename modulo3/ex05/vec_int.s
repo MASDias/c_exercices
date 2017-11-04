@@ -1,30 +1,27 @@
 .section .data
 
-.global vec
+.global vecptr
 .global num
 
 .section .text
-.global vecSum
-vecSum:
+.global vec_int
+vec_int:
 #prologue
 	pushl %ebp
 	movl %esp, %ebp
 #body
-	
-	movl $vecptr, %esi
-	movl $0, %eax
 	movl $0, %ebx
-sum:
+	movl $vecptr, %eax
+plus_one_loop:
 	cmpl num, %ebx
-	je end_sum
-	addl (%esi), %eax
-	addl $4, %esi
+	jz end_plus_one_loop
+	incl (%eax)
+	addl $4, %eax
 	incl %ebx
-jmp sum
+jmp plus_one_loop
 
-end_sum:
+end_plus_one_loop:
 #epilogue
-
 	movl %ebp, %esp
 	popl %ebp
 ret
