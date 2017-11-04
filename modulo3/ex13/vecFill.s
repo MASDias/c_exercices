@@ -1,31 +1,31 @@
 .section .data
 
-.global num
 .global ptrvec
+.global num
+
 
 .section .text
-.global greater10
-greater10:
+.global vecFill
+vecFill:
 #prologue
 	pushl %esi
 	pushl %ebp
 	movl %esp, %ebp
 #body
-	movl $0,%eax
 	movl $0, %ebx
-	movl $ptrvec, %esi		#declara o apontador a esi 
+	movl $ptrvec, %esi		#declara o apontador de ptrvec a esi 
 check_loop:
 	cmpl num, %ebx			#verifica se vetor acabou
 	je end					#acaba o ciclo caso seja igual ao num
-	cmpl $10, (%esi)		#verifica se e maior que 10
-	jge greater				#salta para greater caso seja maior ou igual a 10
+	cmpl $0, (%esi)			#verifica se e negativo
+	jl negative				#salta para negative caso numero seja menor que zero
 	addl $4, %esi			#passa à proxima posicao do vetor
 	incl %ebx				#incrementa no loop
 	jmp check_loop			#volta ao inicio do loop
-greater:
+negative:
+	movl %ebx, (%esi)
 	addl $4, %esi			#passa à proxima posicao do vetor
 	incl %ebx				#incrementa no loop
-	incl %eax				#incrementa no contador
 jmp check_loop				#volta ao inicio do loop
 end:
 #epilogue
