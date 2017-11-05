@@ -10,7 +10,7 @@ seq1:
 	movl $0, %eax
 	incl %ebx
 	cmpl %edx, (%esi,%ebx,4)
-	jg end
+	jle end
 	movl $1, %eax
 end:
 #epilogue
