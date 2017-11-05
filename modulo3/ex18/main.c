@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "countSeq.h"
 int num=8;
-int vecptr[] = {1,2,4,3,3,5,6,9};
+int vecptr[] = {1,5,4,3,3,5,6,9};
 int main(void){
 	int i=0;
 	int total = countSeq();
