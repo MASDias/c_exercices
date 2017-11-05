@@ -1,41 +1,48 @@
 .section .data
 	.global ptr
 	.global num
-	.global x
 	
 .section .text
-	.global exists
+	.global vec_diff
 	
-exists:
+vec_diff:
 #prologue
 	pushl %ebp # save previous stack frame pointer
 	movl %esp, %ebp # the stack frame pointer for sum function
 #body
 	movl ptr, %esi
-	movl num, %ecx
-	movw x, %dx
 	movl $0, %edi
 	movl $0, %eax
 	
 ciclo:
-	cmpw %dx, (%esi)
-	je contador
-
-	cmpl $2, %edi
-	je return
-
-	addl $2, %esi
-	loop ciclo
-	jmp end
-
-contador:
+	pushl %edi
+	pushl %esi
+	pushl %eax
+	movw (%esi), %bx
+	movw $0, x
+	movw %bx, x
+	call exists
+	cmpl $0, %eax
+	popl %eax
+	popl %esi
+	popl %edi
+	je notDuplicated
+	
 	incl %edi
 	addl $2, %esi
+	
+	cmpl num, %edi
+	je end
 	jmp ciclo
 	
-return:
-	movl $1, %eax
-	jmp end
+notDuplicated:
+	incl %eax
+	incl %edi
+	addl $2, %esi
+	cmpl num, %edi
+	je end
+	jmp ciclo
+
 	
 # epilogue
 end:
