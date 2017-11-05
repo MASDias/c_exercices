@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "frequencies.h"
 int num=8;
-int sum=0;
 int ptrgrades[] = {10,12,4,20,13,15,22,19};
 int ptrfreq[21];
 int main(void){
