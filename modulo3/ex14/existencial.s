@@ -10,6 +10,7 @@ exists:
 #prologue
 	pushl %ebp # save previous stack frame pointer
 	movl %esp, %ebp # the stack frame pointer for sum function
+	
 #body
 	movl ptr, %esi
 	movl num, %ecx

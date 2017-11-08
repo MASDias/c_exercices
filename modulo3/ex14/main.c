@@ -5,7 +5,7 @@
 short int vec[]={1,2,1,3,4,4,7,4};
 short int *ptr;
 int num = 8;
-short int x = 1;
+short int x = 7;
 
 int main(void){
 	int i;
