@@ -1,6 +1,6 @@
 main: greater.o main.o
 	gcc -Wall -g greater.o main.o -o main
-	
+
 greater.o: greater.s
 	gcc -Wall -g -c greater.s -o greater.o
 
