@@ -32,7 +32,7 @@ ciclo:
 contador:
 	incl %edi
 	addl $2, %esi
-	jmp ciclo
+	loop ciclo
 	
 return:
 	movl $1, %eax
