@@ -17,6 +17,5 @@ int main(void){
 	printf("Name: %s\n", ptr_p->name);
 	printf("Address: %s\n\n", ptr_p->address);
 	
-	
 	return 0;
 }
