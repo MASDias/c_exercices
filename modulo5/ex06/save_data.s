@@ -10,7 +10,7 @@ save_data:
 	pushl %esi
 	#pushl %edi
 #body
-	movl 8(%ebp), %esi
+	movl 8(%ebp), %esi				#move para registo %esi o endereço da struct no primeiro parametro
 	
 	movl 12(%ebp), %eax				#mover para registo %eax o valor do primeiro parametro da funcao
 	movl %eax, (%esi)				#mover o valor do registo %eax para a primeira variavel da struct 
