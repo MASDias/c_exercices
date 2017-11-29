@@ -13,15 +13,13 @@ save_grades:
 	movl $0, %ecx
 	movl 8(%ebp), %esi
 	movl 12(%ebp), %edi
-	addl $8, %esi
+	
 grades_loop:
 	cmpl $10,%ecx
 	je end
-	movl (%edi), %edx
-	movl %edx, (%esi)
+	movl (%edi,%ecx,4), %edx
+	movl %edx, 8(%esi,%ecx,4)
 	incl %ecx
-	addl $4, %esi
-	addl $4, %edi
 jmp grades_loop
 end:
 #epilogue
