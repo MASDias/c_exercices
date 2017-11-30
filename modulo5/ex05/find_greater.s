@@ -14,33 +14,33 @@ find_greater:
 	pushl %edi
 	
 #body
-	movl 8(%ebp), %esi				#Structure student
-	movl 12(%ebp), %ecx				#Valor de nota minimo
-	movl 16(%ebp), %edi				#Apontador para vetor que vai ser preenchido
+	movl 8(%ebp), %esi				#Apontador para estrutura student passado por parametro
+	movl 12(%ebp), %ecx				#Valor de nota minimo passado por parametro
+	movl 16(%ebp), %edi				#Apontador passado por parametro para vetor que vai ser preenchido
 	
-	addl $12, %esi
-	movl $10, %edx
-	movl $0, %eax
+	addl $12, %esi					#Avançar apontador da estrutura para o principio do vetor grades
+	movl $10, %edx					#Usar edx como valor a decrementar para saida da função
+	movl $0, %eax					#Limpar %eax para servir de contador de valores adicionados
 ciclo:
-	cmpl $0, %edx
+	cmpl $0, %edx					#No caso de edx já tiver sido decrementado até 0, sai da função
 	je end
 
-	cmpl %ecx, (%esi)
-	jg greater
+	cmpl %ecx, (%esi)				#Compara valor apontado por vetor com o valor minimo
+	jg greater						#Se valor apontado for superior ao minimo, salta para greater
 	
-	decl %edx
-	addl $4, %esi
+	decl %edx						
+	addl $4, %esi					#Avança esi para valor seguinte
 	
 	jmp ciclo
 	
 greater:
-	movl (%esi), %ebx
-	movl %ebx, (%edi)
+	movl (%esi), %ebx				#Guarda valor apontado em ebx
+	movl %ebx, (%edi)				#Copia valor em ebx para apontador do novo vetor
 	
-	addl $4, %esi
-	addl $4, %edi
+	addl $4, %esi					#Avança esi para o proximo valor
+	addl $4, %edi					#Avança edi
 	
-	incl %eax
+	incl %eax						
 	decl %edx
 	
 	jmp ciclo
