@@ -17,18 +17,19 @@ change_address:
 
 	movl $0, %ecx
 	
-	movl 8(%ebp), %esi			#Apontador para a estrutura student
+	movl 8(%ebp), %eax			#Apontador para a estrutura student
 	movl 12(%ebp), %ecx			#Address para substituir na estrutura student
 	
-	addl $128, %esi				#Apontador com offset 128 bits para address na estrutura student
+	addl $128, %eax				#Apontador com offset 128 bits para address na estrutura student
 	
 ciclo: 
 	cmpl $0, (%ecx)				#Verificar se já chegou ao fim da string para sair
 	je end
 	
-	movb %ecx, (%esi)			
+	movb (%ecx), %edx
+	movb %dl, (%eax)			
 	incl %ecx
-	incl %esi
+	incl %eax
 	jmp ciclo
 	
 end:

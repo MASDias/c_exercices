@@ -21,7 +21,7 @@ int main(void){
 	char newAddress[120] = "Rua dos Panados Vietnamitas";
 	
 	change_address(ptr_s, newAddress);
-	
+
 	printf("NewAddress: %s\n\n", ptr_s->address);
 	
 	return 0;
