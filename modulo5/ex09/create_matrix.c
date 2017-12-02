@@ -3,7 +3,7 @@
 #include <stdlib.h>
 int** create_matrix(int y, int k){
 	int** matrix;
-	matrix = (int**)malloc(y*k*sizeof(int**));
+	matrix = (int**)malloc(y*k*sizeof(int**));  //alocamento de memória para a matriz YxK de que 4 bytes
 	
 	return matrix;
 }
