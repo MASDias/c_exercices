@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "search_matrix.h"
+
 int search_matrix(int **m, int y, int k, int num){
 	int i=0,j=0;
 	for (i = 0; i < k; i++){

@@ -25,7 +25,7 @@ int main(void){
 	}else{
 		printf("O numero %d, não se encontra na matriz\n",num);
 	}
-	
+	free(m);
 	return 0;
 }
 
