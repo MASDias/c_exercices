@@ -47,9 +47,9 @@ ciclo2:
 
 end:
 #epilogue
-	#popl %edi
+	popl %edi
 	popl %esi
-	#popl %ebx
+	popl %ebx
 	movl %ebp, %esp
 	popl %ebp
 ret
