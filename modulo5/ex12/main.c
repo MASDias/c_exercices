@@ -7,17 +7,31 @@ int main(void){
 	int vec1 []= {1,2,3,4,5,6,7,8,9};
 	int i=0,j=0;
 	int** matrix1 = (int**)malloc(L*sizeof(int*));
-	
+	if(matrix1 == NULL ){
+		printf("Error reserving memory.\n " ); 
+		exit (1);
+	}
 	matrix1[0] = (int*)malloc(L*C*sizeof(int));
+	if(matrix1[0] == NULL ){
+		printf("Error reserving memory.\n " ); 
+		exit (1);
+	}
 	for (i = 1; i < L; i++){
 		matrix1[i] = matrix1[0]+i*C; 
 	}
 	
 	int vec2 [] = {3,3,5,2,1,1,5,4,1};
 	int** matrix2 = (int**)malloc(L*sizeof(int*));
-	
+	if(matrix2 == NULL ){
+		printf(" Error reserving memory.\n " ); 
+		exit (1);
+	}
 	
 	matrix2[0] = (int*)malloc(L*C*sizeof(int));
+	if(matrix2[0] == NULL ){
+		printf(" Error reserving memory.\n " ); 
+		exit (1);
+	}
 	for (i = 1; i < L; i++){
 		matrix2[i] = matrix2[0]+i*C; 
 	}
@@ -33,9 +47,8 @@ int main(void){
 	int** result = sum_matrix(matrix1,matrix2,C,L);
 	for (i = 0; i < L; i++){
 		for (j = 0; j < C; j++){
-			printf("| %d ",result[i][j]);
+			printf("result[%d][%d] = %d\n",i,j,result[i][j]);
 		}
-			printf("|\n");
 	}
 	printf("Address of new matrix: %p\n",result);
 	free(result[0]);
