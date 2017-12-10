@@ -31,7 +31,13 @@ int main(void){
 		}
 	}
 	
-	printf("\nNumber of even elements in the matrix: %d\n\n", count_even_matrix(m, L, C));
+	for (i = 0; i < L; i++){
+		for (j = 0; j < C; j++){
+			printf("m[%d][%d] = %d\n",i,j,m[i][j]);
+		}
+	}
+	
+	printf("\nNumber of even elements in the matrix: %d\n\n", count_even_matrix(&m[L], L, C));
 
 	return 0;
 }
